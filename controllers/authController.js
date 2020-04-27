@@ -125,7 +125,8 @@ const activateAccount = async (req, res, next) => {
         user.activationToken = null;
         await user.save();
 
-        res.redirect(`http://localhost:3000/auth/login`);
+        // res.redirect(`http://localhost:3000/auth/login`);
+        res.redirect(`/auth/login`);
 
     }catch(err){
         consoele.log(err);
@@ -253,7 +254,8 @@ const askResetPassword = async (req, res, next) => {
 const redirectToResetPassword = (req, res, next) => {
     
     const token = req.params.token;
-    res.redirect(`http://localhost:3000/auth/reset-password/${token}`);
+    // res.redirect(`http://localhost:3000/auth/reset-password/${token}`);
+    res.redirect(`/auth/reset-password/${token}`);
 
 }
 
