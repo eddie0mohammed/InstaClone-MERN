@@ -142,7 +142,7 @@ class View extends Component {
                                 <p className={styles.likes}>Likes: {this.state.currentPost && this.state.currentPost.likes.length}</p>
                                 {this.renderButtons()}
                             </div>
-                            <p className={styles.author}>{this.state.currentPost.author.username}</p>
+                            <p className={styles.author}>Author: {this.state.currentPost.author.username}</p>
                             <p className={styles.desc}>{this.state.currentPost.description}</p>
                         </div>
                     </div>

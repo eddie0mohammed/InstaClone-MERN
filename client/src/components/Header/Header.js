@@ -34,35 +34,37 @@ class Header extends Component {
 
     render() {
         return (
-            <div className={styles.header}>
+            <div className={styles.container}>
+                <div className={styles.header}>
 
-                <Link to="/" className={styles.logo}>Logo</Link>
-                
-                <div className={styles.linksContainer}>
-                    {!this.props.isAuthenticated ? 
-                        <ul className={styles.links}>
-                            <li className={styles.link}><Link to='/auth/login' className={styles.Link} >Login</Link></li>
-                            <li className={styles.link}><Link to='/auth/register' className={styles.Link} >Register</Link></li>
-                        </ul>
-                        :
-                        <>
-                        {/* <ul className={styles.links}>
-                            <li className={styles.link}><Link to='/auth/settings' className={styles.Link} >Settings</Link></li>
-                            <li className={styles.link}><div className={styles.Link} onClick={this.handleLogout}>Logout</div></li>
-                        </ul> */}
+                    <Link to="/" className={styles.logo}>InstaClone</Link>
+                    
+                    <div className={styles.linksContainer}>
+                        {!this.props.isAuthenticated ? 
+                            <ul className={styles.links}>
+                                <li className={styles.link}><Link to='/auth/login' className={styles.Link} >Login</Link></li>
+                                <li className={styles.link}><Link to='/auth/register' className={styles.Link} >Register</Link></li>
+                            </ul>
+                            :
+                            <>
+                            {/* <ul className={styles.links}>
+                                <li className={styles.link}><Link to='/auth/settings' className={styles.Link} >Settings</Link></li>
+                                <li className={styles.link}><div className={styles.Link} onClick={this.handleLogout}>Logout</div></li>
+                            </ul> */}
+    
+                            <div className={styles.imgContainer}>
+                                {this.props.user && 
+                                    <img className={styles.img} src={this.props.user.profilePic} alt="profile"/>
+                                }
+                            </div>
 
-                        <div className={styles.imgContainer}>
-                            {this.props.user && 
-                                <img className={styles.img} src={this.props.user.profilePic} alt="profile"/>
-                            }
-                        </div>
+                            <NavItem icon={<CaretIcon />} open={this.state.open} setOpen={this.toggleMenuState}>
+                                <DropdownMenu setOpen={this.toggleMenuState}/>
+                            </NavItem>
+                            </>
+                        }
 
-                        <NavItem icon={<CaretIcon />} open={this.state.open} setOpen={this.toggleMenuState}>
-                            <DropdownMenu setOpen={this.toggleMenuState}/>
-                        </NavItem>
-                        </>
-                    }
-
+                    </div>
                 </div>
             </div>
         )

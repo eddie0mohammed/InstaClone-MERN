@@ -30,6 +30,7 @@ const DropdownMenu = (props) => {
       <CSSTransition in={activeMenu === 'main'} unmountOnExit timeout={500} classNames='menu-primary' onEnter={calcHeight}>
 
         <div className={styles.menu}>
+            <DropdownItem toggleMenu={props.setOpen} click={() => props.history.push('/post/new')}>New</DropdownItem>
             <DropdownItem toggleMenu={props.setOpen} click={() => props.history.push('/auth/myImages')}>My Images</DropdownItem>
 
             <DropdownItem

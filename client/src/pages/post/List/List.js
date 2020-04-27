@@ -25,6 +25,7 @@ class List extends Component {
                     <img className={styles.img} src={`${elem.imageURL}`} alt="img"/>
                     <div className={styles.bar}>
                         <p className={styles.text}>Likes: {elem.likes.length}</p>
+                        <p className={styles.text}>Comments: {elem.comments.length}</p>
                     </div>
                 </div>
             )
@@ -37,8 +38,6 @@ class List extends Component {
             <div className={styles.container}>
 
                 {this.props.posts &&  this.renderPosts()}   
-                
-                
                 
             </div>
         )

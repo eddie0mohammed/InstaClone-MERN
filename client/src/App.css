@@ -15,7 +15,17 @@
   --border: 1px solid #474a4d;
   --border-radius: 8px;
   --speed: 500ms; 
+
 }
+
+body{
+  background-image: url('https://source.unsplash.com/LhlxYMfnTF0');
+  background-size:cover;
+  background-position: center;
+
+
+}
+
 
 ul {
   list-style: none;

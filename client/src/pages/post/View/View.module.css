@@ -1,11 +1,16 @@
 
 .container{
     width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     height: 92vh;
     /* background: pink; */
     display: flex;
+    padding-top: 5rem;
     
 }
+
+
 
 .left{
     width: 55%;
@@ -21,8 +26,8 @@
 }
 
 .img{
-    width: 40rem;
-    height: 40rem;
+    width: 100%;
+    height: 100%;
 }
 
 .details{
@@ -92,7 +97,7 @@
 
 .commentsContainer{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     /* background: red; */
     padding: 1rem;
     border: 1px solid black;
@@ -103,7 +108,7 @@
 
 .commentBox{
     width: 100%;
-    height: 75%;
+    max-height: 75%;
     /* background: green; */
     overflow-y:scroll; 
     border: 1px solid gray;
@@ -122,6 +127,7 @@
     margin-left: auto;
     color: red;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 .comment__delete:hover{
     text-decoration:  underline;
@@ -171,4 +177,17 @@
 }
 .submit:hover{
     font-weight: 500;
+}
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
 }

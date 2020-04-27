@@ -1,20 +1,23 @@
 
 .home{
     width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .heading{
     text-align: center;
     font-size: 5rem;
     margin: 2rem 0 1rem; 
+    font-family: 'Satisfy', cursive;
 }
 
 .listContainer{
     width: 98%;
     margin: 0 auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 75rem;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .btn{

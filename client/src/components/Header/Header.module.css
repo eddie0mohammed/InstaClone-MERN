@@ -1,20 +1,28 @@
 
+.container{
+    width: 100%;
+    background: #21232b;
+}
+
 .header{
     width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: blue;
+    background: #21232b;
     color: white;
 }
 
 .logo{
     font-size: 3rem;
     font-weight: 600;
-    text-transform: uppercase;
     text-decoration: none;
     color: white;
+    font-family: 'Satisfy', cursive;
+    
 }
 
 .links{

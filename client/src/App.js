@@ -47,7 +47,7 @@ class App extends React.Component {
     
     return (
       <div className="App">
-
+        <div className='overlay'></div>
         <Header />
 
         <Switch>

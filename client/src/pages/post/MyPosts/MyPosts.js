@@ -14,9 +14,9 @@ class MyPosts extends Component {
 
                 <h1 className={styles.heading}>My Images</h1>
 
-                {this.props.isAuthenticated && 
+                {/* {this.props.isAuthenticated && 
                     <div className={styles.btn} onClick={() => this.props.history.push('/post/new')}>New</div>
-                }
+                } */}
 
                 <div className={styles.listContainer}>
                     
