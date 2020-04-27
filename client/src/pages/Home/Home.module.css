@@ -1,0 +1,36 @@
+
+.home{
+    width: 100%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 5rem;
+    margin: 2rem 0 1rem; 
+}
+
+.listContainer{
+    width: 98%;
+    margin: 0 auto;
+    border: 1px solid black;
+    height: 75rem;
+    padding: 1rem;
+}
+
+.btn{
+    font-size: 2rem;
+    font-weight: 600;
+    padding:  1rem 2rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 0 1rem 1rem;
+    width: 8rem;
+    text-align: center;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: black;
+    color: white;
+}
