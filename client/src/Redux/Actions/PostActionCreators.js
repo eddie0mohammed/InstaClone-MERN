@@ -26,7 +26,8 @@ export const createPost = (imageFile, description) => async (dispatch, getState)
         formData.append('description', description);
         formData.append('image', imageFile);
 
-        const res = await axios.post('http://localhost:8080/post', formData, config);
+        // const res = await axios.post('http://localhost:8080/post', formData, config);
+        const res = await axios.post('/post', formData, config);
         // console.log(res.data);
 
         dispatch({
@@ -69,7 +70,8 @@ export const getAllPosts = () => async (dispatch) => {
             }
         }
 
-        const res = await axios.get('http://localhost:8080/post', config);
+        // const res = await axios.get('http://localhost:8080/post', config);
+        const res = await axios.get('/post', config);
         // console.log(res.data);
 
         dispatch({
@@ -118,7 +120,8 @@ export const deletePost = (postId) => async (dispatch, getState) => {
             }
         }
 
-        await axios.delete(`http://localhost:8080/post/${postId}`, config);
+        // await axios.delete(`http://localhost:8080/post/${postId}`, config);
+        await axios.delete(`/post/${postId}`, config);
 
         dispatch({
             type: actionTypes.DELETE_POST,
@@ -176,7 +179,8 @@ export const editPost = (imageFile, description, postId) => async (dispatch, get
             formData.append('image', imageFile);
         }
 
-        const res = await axios.patch(`http://localhost:8080/post/${postId}`, formData, config);
+        // const res = await axios.patch(`http://localhost:8080/post/${postId}`, formData, config);
+        const res = await axios.patch(`/post/${postId}`, formData, config);
         // console.log(res.data);
 
         dispatch({
@@ -229,7 +233,8 @@ export const likePost = (postId) => async (dispatch, getState) => {
 
         const body = JSON.stringify({});
 
-        await axios.patch(`http://localhost:8080/post/like/${postId}`, body, config);
+        // await axios.patch(`http://localhost:8080/post/like/${postId}`, body, config);
+        await axios.patch(`/post/like/${postId}`, body, config);
         // console.log(res.data);
 
         dispatch({
@@ -283,7 +288,8 @@ export const unlikePost = (postId) => async (dispatch, getState) => {
 
         const body = JSON.stringify({});
 
-        await axios.patch(`http://localhost:8080/post/unlike/${postId}`, body, config);
+        // await axios.patch(`http://localhost:8080/post/unlike/${postId}`, body, config);
+        await axios.patch(`/post/unlike/${postId}`, body, config);
         // console.log(res.data);
 
         dispatch({
@@ -338,7 +344,8 @@ export const addComment = (comment, postId, username) => async (dispatch, getSta
 
         const body = JSON.stringify({comment, username});
 
-        const res = await axios.patch(`http://localhost:8080/post/addcomment/${postId}`, body, config);
+        // const res = await axios.patch(`http://localhost:8080/post/addcomment/${postId}`, body, config);
+        const res = await axios.patch(`/post/addcomment/${postId}`, body, config);
         // console.log(res.data);
 
         dispatch({
@@ -393,7 +400,8 @@ export const removeComment = (index, postId) => async (dispatch, getState) => {
         }
 
         const body = JSON.stringify({key: index});
-        const res = await axios.patch(`http://localhost:8080/post/removecomment/${postId}`, body, config);
+        // const res = await axios.patch(`http://localhost:8080/post/removecomment/${postId}`, body, config);
+        const res = await axios.patch(`/post/removecomment/${postId}`, body, config);
         // console.log(res.data);
 
         dispatch({
