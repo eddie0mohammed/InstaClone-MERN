@@ -14,10 +14,10 @@ Built with:
 - Nodemailer
 - Cloudinary
 
-Setup
-npm install 
-cd client && npm install
+Setup:
+- npm install 
+- cd client && npm install
 
-npm run dev (uses npm package 'concurrently' to run both front and backend together)
+- npm run dev (uses npm package 'concurrently' to run both front and backend together)
 
 
